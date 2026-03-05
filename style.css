@@ -2,74 +2,6 @@
 
 
 
-
-
-.suggestion-container {
-      width: 100%;
-      height: 35%;
-      background: transparent;
-      border-radius: 5px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-.suggestion-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 0px;
-}
- 
-    .suggestion-box {
-  position: relative;
- 
-}
- 
-.suggestion-btn {
- 
-  padding: 10px 22px;
-  border-radius: 25px;
-  border: 2px solid #494747;
-  background:transparent;
-  cursor: pointer;
-  color: #918d8d;
-}
- 
-.suggestion-content {
-  position: absolute;
-  top: 110%;
-  left: 0;
-  width: 200px;
-   border: 1px solid hsl(165, 2%, 58%);
-  background: #444343;
-  padding: 10px;
-  border-radius: 10px;
- 
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
- 
-  pointer-events: none;
-}
- 
-.suggestion-box:hover .suggestion-content {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  z-index: 100;
-}
- 
-.suggestion-btn:hover{
-  opacity: 1;
-  color: 5#edf0ef;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-
-
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -103,7 +35,7 @@ body {
   margin: 30px;
   border-radius: 5px;
   animation: pulseBorder 2.5s ease-in-out infinite;
-  background: rgba(60, 80, 92, 0.281);
+  background: rgba(60, 80, 92, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -130,26 +62,12 @@ body {
   position: relative;
 }
 
-.chat-header {
-  padding: 16px;
+.chat-header h5{
+  padding:0 16px 0 16px !important;
   text-align: center;
-  font-size: 15px;
   font-weight: 600;
 }
 
-.initial-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  z-index: 10;
-  animation: scaleIn 0.6s ease-out;
-  transition: all 0.5s ease-out;
-}
 
 .chat_bod.chat-started .initial-center {
   position: static;
@@ -374,7 +292,7 @@ body {
   display: none;
   width: 100%;
   max-width: 1200px;
-  margin: 10px auto;
+  margin: 3px auto;
 }
 
 .result_body.show {
@@ -570,14 +488,14 @@ body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  background: #000 !important;
+  /* background: #000 !important; */
   color: var(--text);
   font-family: Inter, system-ui;
   min-height: 100vh;
 }
 
 .page {
-  padding: 30px 0;
+  padding: 10px 0;
   display: flex;
   justify-content: center;
 }
@@ -602,7 +520,7 @@ body {
 .panel {
   border-radius: var(--radius);
   border: 1px solid rgba(165, 160, 160, 0.096);
-  background: #11151c;
+  background: transparent;
   backdrop-filter: blur(10px);
   box-shadow: 0 22px 40px rgba(0, 0, 0, 0.158);
   overflow: hidden;
@@ -728,7 +646,7 @@ body {
 
 /* ===================== RISK DISTRIBUTION ===================== */
 .risk-distribution-box {
-  background: #111827;
+  background: #0f152234;
   padding: 20px;
   border-radius: 12px;
   color: white;
@@ -1191,7 +1109,7 @@ html, body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  height: 99vh;
+  height:100%;
 }
 
 
@@ -1209,15 +1127,11 @@ html, body {
   max-width: 100%;
   padding: 0 12px;
   box-sizing: border-box;
-  height: 90%;
+  height: 100%;
 }
 
-/* Initial center input */
-.initial-center {
-  width: 100%;
-  max-width: 100%;
-  padding: 16px 0;
-}
+
+
 
 .chat-header h3 {
   font-size: 18px;
@@ -1319,6 +1233,7 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
+  height: 100vh !important;
 }
 
 .page {
@@ -1326,6 +1241,7 @@ html, body {
   max-width: 99%;
   box-sizing: border-box;
   overflow-x: hidden;
+  height: 100%;
 }
 
 .wrap {
@@ -1333,9 +1249,10 @@ html, body {
   max-width: 99%;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 10px;
   padding: 0 12px;
   box-sizing: border-box;
+  height: 100%;
 }
 
 /* ── Chat panel ── */
@@ -1398,7 +1315,7 @@ html, body {
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   box-sizing: border-box;
 }
 
@@ -1595,12 +1512,12 @@ html, body {
   }
 
   .panel.chat {
-    height: 60vh;
+    height: 100%;
     min-height: 360px;
   }
 
   .panel.output {
-    height: 240px;
+    height: max-content;
   }
 
   .chat_bod {
