@@ -26,7 +26,7 @@ body {
   font-family: Inter, system-ui;
   color: #fff;
   font-weight: 500;
-  background-color: #2d242437;
+  background-color: #2d2424;
 }
 
 /* ===================== CHAT BOD ===================== */
@@ -590,6 +590,7 @@ body {
   border: none;
   color: #fff;
   outline: none;
+  background: transparent;
 }
 
 .send {
