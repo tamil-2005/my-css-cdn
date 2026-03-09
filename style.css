@@ -38,7 +38,7 @@ body {
   animation: pulseBorder 2.5s ease-in-out infinite;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background-color: #5195a8da;
+  background-color: #13191bda;
 }
 
 .chat_bod.fade-out {
