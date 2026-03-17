@@ -264,7 +264,7 @@ body {
   flex: 1;
   height: 60px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(196, 196, 196, 0.194);
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   background: #b7b7b7;
@@ -717,7 +717,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
-  background: #1a202ca5;
+  background: #1a202c7b;
   border-radius: 10px;
   width: 100%;
 }
@@ -1101,7 +1101,7 @@ body {
 .bubble-text {
   margin-bottom: 2px;
   min-height: 12px;
-  line-height: 1.15;
+  line-height: 1.3;
 }
 
 .scan-list {
@@ -1127,6 +1127,36 @@ body {
   position: absolute;
   left: -15px;
   color: #eaeaea;
+}
+
+input::placeholder{
+  color: white;
+}
+
+.final-Email {
+  font-size: 12px;
+  line-height: 18px;
+  background: #93939399;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  max-width: 320px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  color: #f3f3f3;
+}
+
+/* blinking cursor */
+.typing-cursor::after {
+  content: "|";
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1 }
+  50% { opacity: 0 }
+  100% { opacity: 1 }
 }
 
 .input-bar.disabled {
